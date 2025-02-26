@@ -33,11 +33,11 @@ public class ScrollAndZoom : MonoBehaviour
         {
             Vector3 deltaMousePosition = Input.mousePosition - lastMousePosition;
 
-            float angleX = -deltaMousePosition.y * rotationSpeed * Time.deltaTime;
-            float angleY = deltaMousePosition.x * rotationSpeed * Time.deltaTime;
+            float angleX = deltaMousePosition.y * rotationSpeed * Time.deltaTime;
+            float angleY = -deltaMousePosition.x * rotationSpeed * Time.deltaTime;
 
             targetObject.Rotate(Vector3.right, angleX, Space.World);
-            targetObject.Rotate(Vector3.up, angleY, Space.World);
+            targetObject.Rotate(Vector3.forward, angleY, Space.World);
 
             lastMousePosition = Input.mousePosition;
         }
@@ -51,7 +51,7 @@ public class ScrollAndZoom : MonoBehaviour
         if (Input.GetMouseButton(1))
         {
             Vector3 deltaMousePosition = Input.mousePosition - lastMousePosition;
-            Vector3 move = new Vector3(deltaMousePosition.x * moveSpeed, deltaMousePosition.y * moveSpeed, 0);
+            Vector3 move = new Vector3(deltaMousePosition.x * moveSpeed, 0, deltaMousePosition.y * moveSpeed);
             targetObject.position += move;
 
             lastMousePosition = Input.mousePosition;
