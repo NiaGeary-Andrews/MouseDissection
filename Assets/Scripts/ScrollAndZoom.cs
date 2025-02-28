@@ -48,13 +48,13 @@ public class ScrollAndZoom : MonoBehaviour
             lastMousePosition = Input.mousePosition;
         }
 
-        if (Input.GetMouseButton(1))
+/*        if (Input.GetMouseButton(1))
         {
             Vector3 deltaMousePosition = Input.mousePosition - lastMousePosition;
             Vector3 move = new Vector3(deltaMousePosition.x * moveSpeed, 0, deltaMousePosition.y * moveSpeed);
             targetObject.position += move;
 
             lastMousePosition = Input.mousePosition;
-        }
+        }*/
     }
 }
