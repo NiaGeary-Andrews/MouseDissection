@@ -32,8 +32,6 @@ public class ClickableObject : MonoBehaviour
             Debug.Log(this);
             outline.OutlineColor = Color.green;
             outline.enabled = true;
-            //might need a function to hide floating text
-            ShowFloatingText(objectName);
         }
     }
 
@@ -49,6 +47,8 @@ public class ClickableObject : MonoBehaviour
     {
         outline.OutlineColor = Color.red;
         outline.enabled = true;
+        //might need a function to hide floating text
+        ShowFloatingText(objectName);
     }
 
     private void ShowFloatingText(string text)
