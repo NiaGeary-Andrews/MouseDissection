@@ -8,9 +8,13 @@ public class ClickableObject : MonoBehaviour
 
     private Outline outline;
     public string objectName;
+    public string objectDescription;
 
     [Header("Prefabs")]
     public GameObject FloatingTextPrefab;
+
+    [Header("Managers")]
+    public UIManager UIManager;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,6 +27,8 @@ public class ClickableObject : MonoBehaviour
             Debug.LogError("Outline component not found on " + gameObject.name);
         }
         outline.enabled = false;
+
+        UIManager = UIManager.GetComponent<UIManager>();
     }
 
     void OnMouseEnter()
@@ -32,6 +38,7 @@ public class ClickableObject : MonoBehaviour
             Debug.Log(this);
             outline.OutlineColor = Color.green;
             outline.enabled = true;
+            //ShowFloatingText(objectName);
         }
     }
 
@@ -48,7 +55,8 @@ public class ClickableObject : MonoBehaviour
         outline.OutlineColor = Color.red;
         outline.enabled = true;
         //might need a function to hide floating text
-        ShowFloatingText(objectName);
+        //this is where I need the UI manager to display this text from the object
+        UIManager.updateTitleText(objectName + ": "+ objectDescription);
     }
 
     private void ShowFloatingText(string text)
