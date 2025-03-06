@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI ContentText;
 
 
-    public void updateTitleText(string text)
+    public void UpdateTitleText(string text)
     {
         TitleText.text = text;
     }

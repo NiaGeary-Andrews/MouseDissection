@@ -54,11 +54,11 @@ public class ClickableObject : MonoBehaviour
     {
         outline.OutlineColor = Color.red;
         outline.enabled = true;
-        //might need a function to hide floating text
-        //this is where I need the UI manager to display this text from the object
-        UIManager.updateTitleText(objectName + ": "+ objectDescription);
+        UIManager.UpdateTitleText(objectName + ": "+ objectDescription);
+        SoundManager.PlaySound(SoundType.OBJECTSELECT);
     }
 
+    // Adds floating text on where you have just clicked
     private void ShowFloatingText(string text)
     {
         Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0.1f, 0.1f, 0));
