@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DissectionStepByStep.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Exploratory.unity
+    guid: 0fc99006b000cce41b4798876cd08e34
+  - enabled: 1
+    path: Assets/Scenes/Systems.unity
+    guid: 659ed192135419447838d16639a032c0
+  - enabled: 1
+    path: Assets/Scenes/Introduction.unity
+    guid: c8fddc90b3f778044b99a22c5e58dd89
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
