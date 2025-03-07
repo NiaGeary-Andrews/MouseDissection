@@ -7,6 +7,8 @@ public class ClickableObject : MonoBehaviour
 {
 
     private Outline outline;
+
+    [Header("Strings")]
     public string objectName;
     public string objectDescription;
 
