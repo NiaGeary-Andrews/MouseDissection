@@ -5,8 +5,8 @@ using UnityEngine.UI;
 public class DissectionStepByStepManager : MonoBehaviour
 {
     // PLAN:
-    // Firstly start by getting the student to identify the sex of the mouse.
-    /* 	- Then you want them to pin the limbs.
+    // Firstly start by getting the student to identify the sex of the mouse. Step 1 - should be input text box
+    /* 	- Then you want them to pin the limbs. Step 2 - Should allow them to place these pins on glowing objects. 
         - Then make the first incision.
         - Then with each step of the booklet follow along */
     // With these steps I need different tools to use at each step, different UI to display and a reference to the interactive objects
@@ -37,5 +37,4 @@ public class DissectionStepByStepManager : MonoBehaviour
             stepsUI[i].SetActive(i == currentStep);
         }
     }
-
 }
