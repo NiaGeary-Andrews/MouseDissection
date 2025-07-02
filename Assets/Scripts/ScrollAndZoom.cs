@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using UnityEngine;
 
 // Purpose: Allows rotation, movement, and zooming of an object (Organ)
@@ -57,4 +58,9 @@ public class ScrollAndZoom : MonoBehaviour
             lastMousePosition = Input.mousePosition;
         }*/
     }
+
+    public void changeTargetObject(Transform newTargetObject) {
+        targetObject = newTargetObject;
+    }
+
 }
